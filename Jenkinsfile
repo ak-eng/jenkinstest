@@ -7,7 +7,7 @@ node("vm-15") {
 
     stage "Build"
     /* Build the Docker image with a Dockerfile, tagging it with the build number */
-    def app = docker.build "genia_one_build:jbuild" Dockerfile
+    def app = docker.build "genia_one_build:jbuild" Docker/Dockerfile
 
     stage "RunTheBuildCommand"
     /* We can run tests inside our new image */
