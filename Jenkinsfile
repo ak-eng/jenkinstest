@@ -12,7 +12,7 @@ node("vm-15") {
     stage "RunTheBuildCommand"
     /* We can run tests inside our new image */
     app.inside {
-                sh 'cat README'
+                sh 'cat README;cat /etc/lsb-release'
     }
 
 
