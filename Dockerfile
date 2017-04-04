@@ -1,6 +1,5 @@
 FROM ubuntu:16.04
 MAINTAINER Afroz Keval (afroz.keval@roche.com)
-RUN apt-get upgrade
 RUN apt-get update
 RUN apt-get install -y apt-utils
 RUN apt-get install -y build-essential
@@ -15,6 +14,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y libboost-all-dev
 RUN apt-get install -y maven
 RUN apt-get install -y default-jdk
+RUN apt-get upgrade -y
 
 RUN NVIDIA_GPGKEY_SUM=d1be581509378368edeec8c1eb2958702feedf3bc3d17011adbf24efacce4ab5 && \
     NVIDIA_GPGKEY_FPR=ae09fe4bbd223a84b2ccfce3f60f4b3d7fa2af80 && \
